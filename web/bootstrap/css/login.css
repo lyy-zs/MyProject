@@ -1,0 +1,32 @@
+* {
+    list-style-type: none;
+    margin: 0;
+}
+
+.tbody{
+    margin-left: 550px;
+    margin-top: 150px;
+    width : 362px;
+    height : 362px;
+    border: 1px solid #C6C4C4;
+    background:url("../../application/a7.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.webuser{
+    padding-top:40px;
+    padding-left:80px;
+}
+.webpassword{
+    padding-top:30px;
+    padding-left:80px;
+}
+.fbutton{
+    padding-top: 28px;
+    padding-left:130px;
+}
+
+.tail{
+    padding-top: 60px;
+    padding-left:180px;
+}

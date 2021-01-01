@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src = "../bootstrap/js/jquery.min.js"></script>
+    <script src = "../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .uhead{
+        margin-left: 230px;
+        margin-top: 150px;
+        width : 1050px;
+        height : 500px;
+        border: 1px solid #C6C4C4;
+    }
+    .ubody{
+        margin-left: 0px;
+        width : 1050px;
+        height : 75px;
+        border: 1px solid #ffaa7f;
+    }
+    .tablea{
+        margin-left: 0px;
+        width : 1050px;
+        height : 425px;
+        border: 1px solid #2b669a;
+    }
+
+</style>
+<body>
+<div class="uhead">
+    <div class="ubody">
+        <form action="">
+            <div style="margin-top:20px;margin-left:20px">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle btn-sm"
+                            data-toggle="dropdown">
+                        当前所有用户 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">用户名</a></li>
+                        <li><a href="#">另一个功能</a></li>
+                        <li><a href="#">其他</a></li>
+
+                    </ul>
+                </div>
+<!--                <span style="margin-left :50px;">起始时间</span>-->
+<!--                <input size="30%" type="text" name="username" id="username" placeholder="请输入起始时间" >-->
+<!--                <span style="margin-left: 50px">终止时间</span>-->
+<!--                <input size="30%" type="text" name="username" id="username" placeholder="请输入终止时间" >-->
+<!--                <input type="submit" name="submit" value="查询" style="margin-left:60px;height:30px;width:100px;background-color:#9acfea;border:none;cursor: pointer;">-->
+            </div>
+        </form>
+    </div>
+    <div class="tablea">
+        <table class="table table-striped">
+            <caption>用户信息表</caption>
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>账号</th>
+                <th>密码</th>
+                <th>存款<th>
+                <th>登录时间<th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>T1</td>
+                <td>张三</td>
+                <td>1111</td>
+                <td>15000<td>
+                <td>2020-5-6<td>
+            </tr>
+            <tr>
+                <td>T1</td>
+                <td>张三</td>
+                <td>1111</td>
+                <td>15000<td>
+                <td>2020-5-6<td>
+            </tr>
+            <tr>
+                <td>T1</td>
+                <td>张三</td>
+                <td>1111</td>
+                <td>15000<td>
+                <td>2020-5-6<td>
+            </tr>
+            </tbody>
+        </table>
+
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li ><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+        <span style = "font-size:15px;margin-left:5px">
+            共${pb.totalCount}条记录，共${pb.totalPage}页
+        </span>
+
+    </div>
+
+</div>
+
+</body>
+</html>

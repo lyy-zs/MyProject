@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<style>
+    .ggg{
+        margin-left: 550px;
+        margin-top: 150px;
+        width : 410px;
+        height : 432px;
+        border: 1px solid #C6C4C4;
+        background: url("a7.jpg");
+    }
+    .ruser{
+        padding-top:10px;
+        padding-left:60px;
+    }
+    .remail{
+        padding-top:30px;
+        padding-left:60px;
+    }
+    .rpassword{
+        padding-top:40px;
+        padding-left:60px;
+    }
+    .rbutton{
+        padding-top: 38px;
+        padding-left:150px;
+    }
+    .tail{
+        padding-top:40px;
+        padding-left:160px
+    }
+    .head1{
+        padding-left: 125px;
+        padding-top:10px
+    }
+    </style>
+    <script type="application/javascript">
+        function checkemail() {
+            const xhr = new XMLHttpRequest();
+            const email = document.getElementById("email22").value;
+
+            const url = "/bank/AjaxServlet";
+            xhr.open("post",url,true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    document.getElementById("iii").innerHTML = xhr.responseText;
+                    if(xhr.responseText.indexOf("通过") >= 0){
+                        document.getElementById("iii").style.color = "green";
+                    } else document.getElementById("iii").style.color = "red";
+                }
+            };
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+            xhr.send("email=" + email);
+        }
+        function checkname(){
+            const xhr = new XMLHttpRequest();
+            const username = document.getElementById("username223").value;
+
+            const url = "/bank/nameAjaxServlet";
+            xhr.open("post",url,true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    document.getElementById("ii").innerHTML = xhr.responseText;
+                    if(xhr.responseText.indexOf("通过") >= 0){
+                        document.getElementById("ii").style.color = "green";
+                    } else document.getElementById("ii").style.color = "red";
+                }
+            };
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+            xhr.send("username=" + username);
+        }
+    </script>
+<body>
+<div class = "ggg">
+    <form action="/bank/RegisterServlet" method="post" >
+        <div class="head1">
+            <h4>欢迎来到用户注册界面</h4>
+        </div>
+        <div class = "ruser">
+            <span>账号：</span><br/>
+            <input size="30%" type="text" name="username" id="username223" placeholder="请输入你的账号" onkeyup="return checkname()" >
+            <span id = "ii"></span>
+
+        </div>
+        <div class = "remail">
+            <span>邮箱：</span><br/>
+            <input size="30%" type="text" name="email" id="email22" placeholder="请输入你的邮箱" onkeyup="return checkemail();">
+            <span id = "iii"></span>
+        </div>
+        <div class = "rpassword">
+            <span>密码：</span><br/>
+            <input size="30%" type="password" name="userpass" id="userpass" placeholder="请输入你的密码">
+        </div>
+        <div class = "rbutton">
+
+            <input type="submit" name="submit" value="登录" style="height:30px;width:100px;background-color:#9acfea;border:none;cursor: pointer;">
+        </div>
+        <div class = "tail">
+            <span>还没账号？<a href="main.jsp">点我即可登录</a>。</span>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
